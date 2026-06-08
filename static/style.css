@@ -1,0 +1,643 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background: linear-gradient(
+        135deg,
+        #ffb6e6,
+        #d8b4fe,
+        #93c5fd
+    );
+
+    background-size:400% 400%;
+
+    animation:fundo 12s ease infinite;
+
+    color:white;
+}
+
+@keyframes fundo{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding-top:80px;
+}
+
+.titulo{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:15px;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,.8);
+}
+
+.subtitulo{
+    text-align:center;
+    font-size:1.2rem;
+    margin-bottom:60px;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+
+    text-decoration:none;
+    color:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:
+        0 0 30px rgba(255,255,255,.4);
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    margin-bottom:20px;
+}
+
+.card span{
+    font-weight:bold;
+}
+
+.princesa{
+    border-left:5px solid #ff69b4;
+}
+
+.sereia{
+    border-left:5px solid #00e5ff;
+}
+
+.rainha{
+    border-left:5px solid #ffffff;
+}
+
+.pagina{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+
+    padding-top:40px;
+    padding-bottom:50px;
+}
+
+.pagina h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.voltar{
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-weight:bold;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+}
+
+input{
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:1rem;
+}
+
+button{
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    background:white;
+
+    color:#7c3aed;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+.resultado{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    text-align:center;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.15);
+}
+
+.resultado h2{
+    margin-bottom:15px;
+}
+
+.resultado p{
+    margin-bottom:10px;
+    font-size:1.1rem;
+}
+
+table{
+    width:100%;
+
+    margin-top:30px;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+}
+
+th{
+    background:rgba(255,255,255,.2);
+
+    padding:15px;
+}
+
+td{
+    padding:12px;
+
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:rgba(255,255,255,.08);
+}
+
+.matriz{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:center;
+}
+
+.linha-matriz{
+    display:flex;
+    gap:10px;
+}
+
+.matriz input{
+    width:90px;
+    height:60px;
+    padding:0;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    background:#fffde7;
+}
+
+.vetor-b{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+}
+
+.vetor-b input{
+
+    width:90px;
+    height:60px;
+
+    padding:0;
+
+    text-align:center;
+
+    font-size:18px;
+    font-weight:bold;
+}
+
+select{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    background:#fffde7;
+}
+
+hr{
+
+    margin:30px 0;
+
+    border:none;
+
+    border-top:2px solid rgba(255,255,255,.4);
+}
+
+
+.bela-page{
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.60)
+        ),
+        url("/static/castelo_bela.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ariel-page{
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.60)
+        ),
+        url("/static/fundo_ariel.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.elsa-page{
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.60)
+        ),
+        url("/static/fundo_elsa.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pagina{
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,.12);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+
+    color: white;
+}
+
+input{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 16px;
+    background-color: rgb(255, 253, 231);
+}
+
+button{
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: gold;
+    color: rgb(111, 0, 255);
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+@media(max-width:768px){
+
+    .titulo{
+        font-size:2rem;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .matriz{
+        display:grid;
+        gap:10px;
+        justify-content:center;
+    }
+}
+
+/* ==========================
+   HOME DISNEY
+========================== */
+
+.home-page{
+    min-height:100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.55)
+        ),
+        url("/static/castelo.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+}
+
+.overlay{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.home-page .titulo{
+
+    font-family:'Cinzel', serif;
+
+    font-size:4rem;
+
+    color:white;
+
+    text-align:center;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 20px gold,
+        0 0 40px gold;
+
+    margin-bottom:15px;
+
+    animation:brilho 3s infinite alternate;
+}
+
+@keyframes brilho{
+
+    from{
+        text-shadow:
+            0 0 10px white,
+            0 0 20px gold;
+    }
+
+    to{
+        text-shadow:
+            0 0 15px white,
+            0 0 35px gold,
+            0 0 60px gold;
+    }
+}
+
+.home-page .subtitulo{
+
+    color:white;
+
+    font-size:1.3rem;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+    text-shadow:0 0 10px black;
+}
+
+.home-page .cards{
+
+    display:flex;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+}
+
+.home-page .card{
+
+    width:330px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:30px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    backdrop-filter:blur(10px);
+}
+
+.home-page .card:hover{
+
+    transform:
+        translateY(-12px)
+        scale(1.05);
+
+    box-shadow:
+        0 0 30px rgba(255,255,255,.6);
+}
+
+.princesa-img{
+
+    width:160px;
+    height:160px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+    transition:.4s;
+}
+
+.card:hover .princesa-img{
+
+    transform:scale(1.08);
+}
+
+.home-page .card h2{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+}
+
+.home-page .card p{
+
+    margin-bottom:25px;
+
+    line-height:1.5;
+}
+
+.botao{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        45deg,
+        gold,
+        #fff1a8
+    );
+
+    color:black;
+
+    font-weight:bold;
+
+    box-shadow:0 0 20px gold;
+}
+
+.footer{
+
+    margin-top:50px;
+
+    color:white;
+
+    text-align:center;
+
+    text-shadow:0 0 10px black;
+}
+
+@media(max-width:900px){
+
+    .home-page .titulo{
+        font-size:2.5rem;
+    }
+
+    .home-page .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .home-page .card{
+        width:100%;
+        max-width:380px;
+    }
+}

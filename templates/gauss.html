@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminação de Gauss</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="elsa-page">
+
+<div class="pagina">
+
+    <a href="/" class="voltar">⬅ Voltar</a>
+
+    <h1>Eliminação de Gauss</h1>
+
+    <!-- FORMULÁRIO 1 -->
+    <form method="POST">
+
+        <h3>Tamanho da Matriz</h3>
+
+        <select name="n" required>
+            <option value="">Selecione a matriz</option>
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+        </select>
+
+        <button
+            type="submit"
+            name="gerar"
+        >
+            ✨ Gerar Sistema
+        </button>
+
+    </form>
+
+    {% if n %}
+
+    <hr>
+
+    <!-- FORMULÁRIO 2 -->
+    <form method="POST">
+
+        <input
+            type="hidden"
+            name="n"
+            value="{{ n }}"
+        >
+
+        <h2>Matriz A</h2>
+
+        <div class="matriz">
+
+            {% for i in range(n) %}
+
+            <div class="linha-matriz">
+
+                {% for j in range(n) %}
+
+                <input
+                    type="number"
+                    step="any"
+                    name="a{{i}}_{{j}}"
+                    required
+                    placeholder="a{{i+1}}{{j+1}}"
+                >
+
+                {% endfor %}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <h2>Vetor b</h2>
+
+        <div class="vetor-b">
+
+            {% for i in range(n) %}
+
+            <input
+                type="number"
+                step="any"
+                name="b{{i}}"
+                required
+                placeholder="b{{i+1}}"
+            >
+
+            {% endfor %}
+
+        </div>
+
+        <button
+            type="submit"
+            name="resolver"
+        >
+            ❄️ Resolver Sistema
+        </button>
+
+    </form>
+
+    {% endif %}
+
+    {% if resultado is not none %}
+
+    <div class="resultado">
+
+        <h2>✨ Solução Encontrada</h2>
+
+        {% for valor in resultado %}
+
+        <p>
+            x{{ loop.index }} = {{ "%.6f"|format(valor) }}
+        </p>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>
