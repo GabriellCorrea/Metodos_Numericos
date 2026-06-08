@@ -160,9 +160,9 @@ http://127.0.0.1:5000
 
 # 👨‍💻 Autores
 
-Gabriel Corrêa
-Marcelle Lohane
-Luã Japiassú
-Mateus Sachinho
+- Gabriel Corrêa
+- Marcelle Lohane
+- Luã Japiassú
+- Mateus Sachinho
 
 Projeto desenvolvido para fins acadêmicos na disciplina de Modelagem Computacional.
