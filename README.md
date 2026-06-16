@@ -50,12 +50,7 @@ O sistema exibe:
 
 Resolve sistemas lineares através do método de eliminação de Gauss.
 
-O usuário pode escolher:
-
-* Matriz 2x2
-* Matriz 3x3
-* Matriz 4x4
-* Matriz 5x5
+O usuário pode escolher qualquer tamanho de matriz
 
 Após informar a matriz dos coeficientes e o vetor independente, o sistema retorna a solução do sistema.
 
